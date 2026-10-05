@@ -41,7 +41,9 @@ git clone
 
 - **Open the game.** Double-click `index.html`. Click the title card, drive with the arrow keys. It should be a straight road, an empty roadside, and nobody else on it.
 
-<div style="page-break-after: always;"></div>
+```{=latex}
+\newpage
+```
 
 ### **Exercise 2 : Modification I**
 
@@ -101,7 +103,9 @@ git rebase
 git tag
 ```
 
-<div style="page-break-after: always;"></div>
+```{=latex}
+\newpage
+```
 
 ### _Final Result Example_
 

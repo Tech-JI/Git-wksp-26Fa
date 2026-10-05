@@ -106,7 +106,7 @@ def main():
             print("Operation cancelled by user.\n")
             return
     # Add students from group.txt to the GitWksp_teamXX repositories
-    add_students_from_group_file(teapot, "group.txt", "template-Git-wksp-25Fa",confirm)
+    add_students_from_group_file(teapot, "group.txt", "template-Git-wksp-26Fa",confirm)
 
     print("Script completed!\n")
 
