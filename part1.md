@@ -6,7 +6,7 @@ author:
 theme:
   - Copenhagen
 date:
-  - November 2025
+  - November 2026
 colorlinks: true
 linkcolor: .
 urlcolor: blue
