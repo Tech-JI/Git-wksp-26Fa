@@ -6,7 +6,7 @@ author:
 theme:
   - Copenhagen
 date:
-  - November 2025
+  - November 2026
 colorlinks: true
 linkcolor: .
 urlcolor: blue
@@ -57,7 +57,7 @@ header-includes: |
 
 - [sindresorhus/awesome](https://github.com/sindresorhus/awesome): an online Git repository containing everything you'll ever need to self-study any subject in Computer Science
 
-- It's our turn! GC has a blue tiger mascot right now, but let's get creative. We're gonna design our own ASCII art GC mascot with Git. Template files are at [tests](https://focs.ji.sjtu.edu.cn/git/tests).
+- It's our turn! We're gonna build our own racing game with Git. One config file, four roles, and a change you can see the moment you reload the page. Your group's starting repository is at `[repository-url]`.
 
 ## Enter shell
 
@@ -151,9 +151,9 @@ header-includes: |
 
 ## Practice
 
-- Learn from the masters! [cowsay](https://en.wikipedia.org/wiki/Cowsay), [GitHub's mascot octocat](https://api.github.com/octocat), [ASCII Star wars](https://www.asciimation.co.nz/), ["Three ASCII art styles" by Roy/SAC](https://www.roysac.com/roy-sac_styles_of_underground_text_art.html), [inspirations.txt](inspirations.txt)
+- Practise on real files: make yourself a scratch directory, copy a few files into it, rename one, delete another
 
-- Copy and save a few works by others in separate files in `~/git_wksp/inspiration`, using shell. Get some inspiration
+- Take a look at what you are about to clone. Everything the game does lives in one file, `config.js` - and every change you make to it this afternoon is visible the moment you reload the page
 
 ## Outlook
 
@@ -453,7 +453,7 @@ git clone / git init -> git status -> edit -> git add
 
 Targets:
 
-- Add author name (i.e. your own name) to your mascot file
+- Add author name (i.e. your own name) to `team.authors` in `config.js`
 
 - Check the status of the local repository
 
@@ -638,7 +638,7 @@ Targets:
 
 - Switch to the branch
 
-- Draw your own mascot design
+- Change the part of `config.js` your role owns
 
 - Commit your changes
 
@@ -871,9 +871,9 @@ Targets:
 
 - Choose a team member to pull all changes to his/her local repository
 
-- Merge all branches into `master` and resolve the conflicts
+- Merge all branches into `master` and resolve the conflicts in `config.js`
 
-- Add the authors and push
+- Tag the merged result `v1.0` and push
 
 # Other common Git issues
 
