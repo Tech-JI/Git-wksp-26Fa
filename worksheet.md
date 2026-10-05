@@ -4,13 +4,15 @@ _Git Workshop -- Tech GC -- November 16, 2025_
 
 ## _Activity Overview_
 
-**Activity Name**: ASCII Art Mascot Collaborative Puzzle
+**Activity Name**: GC Racing Game, built by configuration
 
-**Objective**: Learn Git branch management, merging, and conflict resolution through collaborative ASCII art creation.
+**Objective**: Learn Git branch management, merging, and conflict resolution by turning one boring game into a playable one, together.
 
 **Group Size**: 2-4 people per group
 
-**Team Roles Reference**: Head Designer, Body Designer, Leg Designer, Background Designer
+**Team Roles Reference**: Driver, Track Engineer, Scenery Artist, Traffic Controller
+
+**The one rule**: you only ever edit `config.js`.
 
 ---
 
@@ -20,24 +22,32 @@ _Git Workshop -- Tech GC -- November 16, 2025_
 
 _SSH Setup_: Refer to [ssh_setup.pdf](ssh_setup.pdf)
 
+_Set your identity_: commits carry whichever name and address are configured here.
+
+```
+git config
+```
+
 ### **Exercise 1 : Remote to Local**
 
-> 📥 _Get the template of the mascot._
+> 📥 _Get your group's repository._
 
-- **connect to remote repository.** Recommended Commands:
+- **Connect to the remote repository and clone it.** Recommended Commands:
 
 ```
 git config
 git clone
 ```
 
+- **Open the game.** Double-click `index.html`. Click the title card, drive with the arrow keys. It should be a straight road, an empty roadside, and nobody else on it.
+
 <div style="page-break-after: always;"></div>
 
 ### **Exercise 2 : Modification I**
 
-> ✏️ _Add the author name._
+> ✏️ _Put your name on the title card._
 
-- **Change your file and commit the changes.** Recommended Commands:
+- **Add your name to `team.authors` in `config.js`, then change and commit.** Recommended Commands:
 
 ```
 git status
@@ -46,29 +56,31 @@ git diff
 git commit
 ```
 
+- **Look at what you just did.** `git diff HEAD~1` shows your commit as a diff, `git show` shows it with the message.
+
 ### **Exercise 3 : Branch & Modification II**
 
-> 🎨 _Create your own mascot!_
+> 🎨 _Tune your part of the game._
 
-- **Undo commit and save your changes to the staging area.** Recommended Command:
+- **Undo your commit and save your changes to the staging area.** Recommended Command:
 
 ```
 git reset
 ```
 
-- **Create and switch branches.** Recommended Commands:
+- **Create and switch to a branch named after your role.** Recommended Commands:
 
 ```
 git branch
 git checkout
 ```
 
-- **Change and commit again**
+- **Change your part of `config.js` and commit again.** Reload the browser after each change - that is the feedback loop. The Driver owns `player` and `physics`, the Track Engineer owns `track`, the Scenery Artist owns `background`, `scenery` and `colors`, the Traffic Controller owns `rivals`, `fog` and `difficulty`.
 
 ### **Exercise 4 : Merge & Conflict**
 
 > 🔧 _Manually edit to resolve conflicts._\
-> ✅ _Complete the whole mascot design._
+> ✅ _Merge every role's work into one working game._
 
 - **Push changes to the remote repository.** Recommended Command:
 
@@ -76,31 +88,42 @@ git checkout
 git push
 ```
 
-- **Merge the branches and resolve conflict.** Recommended Commands：
+- **Merge the branches and resolve conflict.** Recommended Commands:
 
 ```
 git merge
 git rebase
 ```
 
+- **Tag the result.** Recommended Command:
+
+```
+git tag
+```
+
 <div style="page-break-after: always;"></div>
 
 ### _Final Result Example_
 
-```
-     /\_____/\
-    (  = . =  )
-    >    ^    <
-    | SJTU-GC |
-    |---------|
-    |make real|
-    \_changes_/
-    /         \
-   /_/\/\_/\/\_\
-   Git Wksp 2025
+The deliverable is the merged `config.js`:
+
+```js
+window.RACER_CONFIG = {
+  team: {
+    title:      'GC Racing Game',
+    authors:    [ 'GitWksp26Fa Group Project', 'AAA', 'BBB', 'CCC', 'DDD' ],
+    intensity:  1.5,
+  },
+  player:    { hue: 240, saturate: 1.2 },
+  track:     { preset: 'sections', lanes: 4 },
+  scenery:   { density: 2.0 },
+  rivals:    { count: 40 },
+  fog:       { density: 5 },
+  // ...
+};
 ```
 
-💡Note: This is merely an example. Feel free to deviate completely from it — let your imagination flow and guide you anywhere. We can't wait to see the unique creations you'll bring to life!
+💡Note: This is merely an example. Reload `index.html` and the road bends, the trees are back, there is traffic to avoid, and your names are on the title card. The settings are yours to argue about — we can't wait to see what your group builds.
 
 ---
 
@@ -109,21 +132,24 @@ git rebase
 ### Preparation Phase
 
 - [ ] Git environment configuration completed
-- [ ] Initial repository setup
-- [ ] Participant Git basic training
+- [ ] Repository cloned, game running
+- [ ] Baseline confirmed boring
 - [ ] Role assignment clarified
 
 ### Execution Phase
 
 - [ ] Acquisition of basic Git commands
 - [ ] All branches created successfully
-- [ ] Individual creation by each role completed
+- [ ] Individual tuning by each role completed
 - [ ] Merge conflict experience completed
 - [ ] Conflict resolution discussion conducted
+- [ ] Game still runs after every merge
 - [ ] Final integration successful
 
 ### Conclusion Phase
 
+- [ ] Every group member's name on the title card
+- [ ] `v1.0` tagged
 - [ ] Work showcase and sharing
 - [ ] Git techniques review
 
