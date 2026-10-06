@@ -30,7 +30,7 @@ git config
 
 ### **Exercise 1 : Remote to Local**
 
-> 📥 _Get your group's repository._
+> _Get your group's repository._
 
 - **Connect to the remote repository and clone it.** Recommended Commands:
 
@@ -47,7 +47,7 @@ git clone
 
 ### **Exercise 2 : Modification I**
 
-> ✏️ _Put your name on the title card._
+> _Put your name on the title card._
 
 - **Add your name to `team.authors` in `config.js`, then change and commit.** Recommended Commands:
 
@@ -62,7 +62,7 @@ git commit
 
 ### **Exercise 3 : Branch & Modification II**
 
-> 🎨 _Tune your part of the game._
+> _Tune your part of the game._
 
 - **Undo your commit and save your changes to the staging area.** Recommended Command:
 
@@ -81,8 +81,8 @@ git checkout
 
 ### **Exercise 4 : Merge & Conflict**
 
-> 🔧 _Manually edit to resolve conflicts._\
-> ✅ _Merge every role's work into one working game._
+> _Manually edit to resolve conflicts._\
+> _Merge every role's work into one working game._
 
 - **Push changes to the remote repository.** Recommended Command:
 
@@ -127,7 +127,7 @@ window.RACER_CONFIG = {
 };
 ```
 
-💡Note: This is merely an example. Reload `index.html` and the road bends, the trees are back, there is traffic to avoid, and your names are on the title card. The settings are yours to argue about — we can't wait to see what your group builds.
+Note: This is merely an example. Reload `index.html` and the road bends, the trees are back, there is traffic to avoid, and your names are on the title card. The settings are yours to argue about — we can't wait to see what your group builds.
 
 ---
 
