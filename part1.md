@@ -177,7 +177,7 @@ header-includes: |
 
 - `git config --global user.email <EMAIL>`
 
-## Git config authenticity
+## Git config authenticity {shrink=8}
 
 - For [FOCS Git](https://focs.ji.sjtu.edu.cn/git/), `EMAIL` must be your SJTU email
 
@@ -251,7 +251,7 @@ sequenceDiagram
 
 - `HEAD`: A special pointer to the current working commit in the repository
 
-## The four states
+## The four states {shrink=8}
 
 \center
 
@@ -398,7 +398,7 @@ sequenceDiagram
 
 \normalsize
 
-## `git diff`
+## `git diff` {shrink=8}
 
 \small
 

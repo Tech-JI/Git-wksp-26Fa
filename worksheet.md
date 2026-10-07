@@ -1,6 +1,6 @@
 # Git Worksheet
 
-_Git Workshop -- Tech GC -- November 16, 2026_
+_Git Workshop -- Tech GC -- October 10, 2026_
 
 ## _Activity Overview_
 

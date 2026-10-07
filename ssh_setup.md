@@ -53,7 +53,7 @@ Gitea under another user.
 Connection to focs.ji.sjtu.edu.cn closed.
 ```
 
-Now, whenever you clone a FOCS repository or add a FOCS repository to remote, you should specify the url as `ssh://git@focs.ji.sjtu.edu.cn:2222/PATH/TO/REPO` and replace `PATH/TO/REPO` with the actual path to the repository. For example,
+Now, whenever you clone a FOCS repository or add a FOCS repository to remote, you should specify the url as \nolinkurl{ssh://git@focs.ji.sjtu.edu.cn:2222/PATH/TO/REPO} and replace `PATH/TO/REPO` with the actual path to the repository. For example,
 
 ```sh
 git clone ssh://git@focs.ji.sjtu.edu.cn:2222/engr101s1/<repo>
