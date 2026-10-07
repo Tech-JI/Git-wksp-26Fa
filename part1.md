@@ -435,7 +435,7 @@ index 1234567..89abcde 100644
 ![git-log](img/git-log.jpg)
 
 - “HEAD -> master”: You are currently in the master branch.
-- “origin/master”: Your local master branch is synchronized with the master branch of the remote repository.
+- “origin/master”: The locally recorded position of the remote `master` branch.
 
 ## Basic workflow
 
@@ -622,7 +622,7 @@ git log --graph --no-color --pretty=oneline --abbrev-commit
 | --------------------- | ----------------------- |
 | `git checkout <name>` | Switch to branch `name` |
 
-**NOTE:** Before switching branch, make sure all your changes are committed or in staging area, or else you won't be able to switch!
+**NOTE:** Git allows switching branches if local changes can be preserved; otherwise, commit or stash them first.
 
 **TIP:** You can also use `git switch <name>` to switch to branch `name`.
 
@@ -679,7 +679,7 @@ A---B---C---D (master)     A---B---C---D (master)
 
 \normalsize
 
-- `E'` has the same snapshot as `E`, `F'` has the same snapshot as `F`
+- `E'` and `F'` reapply the changes from `E` and `F` on top of `D`.
 - Creates linear history and rewrite commit history.
 
 ## What's 'fast-forward'
@@ -851,7 +851,7 @@ This is the content I want to keep
 
 - Use `git diff` to review what you've changed before committing
 
-- Consider using `git merge-tool` for complex conflicts
+- Consider using `git mergetool` for complex conflicts
 
 ## Common tools for resolving conflicts
 

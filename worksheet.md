@@ -67,7 +67,7 @@ git commit
 - **Undo your commit and save your changes to the staging area.** Recommended Command:
 
 ```
-git reset
+git reset --soft HEAD~1
 ```
 
 - **Create and switch to a branch named after your role.** Recommended Commands:
