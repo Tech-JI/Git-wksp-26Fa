@@ -51,13 +51,13 @@ header-includes: |
 
   - Useful for project collaboration, i.e. no more sharing code through WeChat
 
-## Surprising use of Git
+## Git: More than software development
 
-- [pass](https://www.passwordstore.org/): a password manager using Git to store and sync passwords
+- [pass](https://www.passwordstore.org/): storing and syncing passwords using Git
 
-- [sindresorhus/awesome](https://github.com/sindresorhus/awesome): an online Git repository containing everything you'll ever need to self-study any subject in Computer Science
+- [sindresorhus/awesome](https://github.com/sindresorhus/awesome): online Git repository containing self-study materials for Computer Science
 
-- It's our turn! We're gonna build our own racing game with Git. One config file, four roles, and a change you can see the moment you reload the page. Your group's starting repository is at `[repository-url]`.
+- It's our turn! We're gonna **build our own racing game** with Git. One config file, four roles, and a change you can see the moment you reload the page. Your group's starting repository is at `[repository-url]`.
 
 ## Enter shell
 
