@@ -45,11 +45,11 @@ header-includes: |
   - [Visual Studio Code](https://github.com/microsoft/vscode)
 
 - We learn Git because it's:
-  - Required in ENGR1010J and ENGR1510J
+  - Required in ENGR1010J, ENGR1510J, and later courses
 
-  - Useful for version control
+  - Useful for version control, i.e. no more "presentation_v4_final_real_(3).pptx"
 
-  - Useful for project collaboration
+  - Useful for project collaboration, i.e. no more sharing code through WeChat
 
 ## Surprising use of Git
 
