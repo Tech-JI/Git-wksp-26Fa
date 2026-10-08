@@ -146,18 +146,20 @@ flowchart TD
     linkStyle default stroke:#b83a12,stroke-width:2px;
 ```
 
+Examples: `/home/mary`, `/bin`, `/lib/lib64`
+
 ## Special directories
 
 <!--prettier-ignore-->
 | Description                  | Representation                                                  |
 | ---------------------------- | --------------------------------------------------------------- |
-| Home directory               | `~`                                                             |
+| Home directory               | `~`, same as `/home/yourname`                                   |
 | Root directory               | `/`                                                             |
 | Drive directories (Windows)  | `/c/`, `/d/`, etc. in Git Bash; `/mnt/c/`, `/mnt/d/`, etc. in WSL |
 | Current directory            | `.`                                                             |
 | Parent directory             | `..`                                                            |
 
-- `.` and `..` can appear anywhere in a path. When appearing first in a path, they are relative to the current working directory
+- `.` and `..` can appear anywhere in a path. If at the beginning, they are relative to the **current working directory**
 
 - E.g. `/a/b/./c` is the same as `/a/b/c`, and `/a/b/../c` is the same as `/a/c`
 
@@ -170,7 +172,7 @@ flowchart TD
 <!--prettier-ignore-->
 | Command                      | Action                                                                |
 | ---------------------------- | --------------------------------------------------------------------- |
-| `cd [DIRECTORY]`             | Change working directory to `DIRECTORY`, default: home directory       |
+| `cd [DIRECTORY]`             | Go to `DIRECTORY`, default: home directory       |
 | `ls [-a]` `[-l] [DIRECTORY]` | List files in `DIRECTORY`, default: CWD; -a show hidden files; -l show more info |
 | `mkdir <DIRECTORY>`          | Create `DIRECTORY`                                                    |
 | `cp <SOURCE> <DEST>`         | Copy `SOURCE` to `DEST`                                               |
@@ -198,15 +200,15 @@ flowchart TD
 
 ## Practice
 
-- Practise on real files: make yourself a scratch directory, copy a few files into it, rename one, delete another
+- Go to home directory (`cd`), create new directory (`mkdir`), list directories (`ls`), move into the directory (`cd`), create some files in it (`nano` or `code`), rename files (`mv`), then delete them (`rm`)
 
-- Take a look at what you are about to clone. Everything the game does lives in one file, `config.js` - and every change you make to it this afternoon is visible the moment you reload the page
+- Take a look at what you are about to clone. Everything the game does lives in one file, `config.js` - and every change you make to it today is visible the moment you reload the page
 
-## Outlook
+## Going further
 
-- More advanced topics in shell: check out [Bash Guide](https://mywiki.wooledge.org/BashGuide) and [Bash Pitfalls](https://mywiki.wooledge.org/BashPitfalls)
+- Advanced topics: [Bash Guide](https://mywiki.wooledge.org/BashGuide) and [Bash Pitfalls](https://mywiki.wooledge.org/BashPitfalls)
 
-- Shell != Bash: cmd, PowerShell, Bourne shell, dash, csh, zsh, ...
+- Different shells: cmd, PowerShell, Bourne shell, dash, csh, zsh, ...
 
 # Git setup
 
@@ -260,7 +262,7 @@ A repository is:
 
 | Command                       | Function                     |
 | ----------------------------- | ---------------------------- |
-| `git clone <repository-url>`  | Basic cloning                |
+| `git clone <url>`  | Basic cloning                |
 | `git clone <url> <dir>`       | Clone to specified directory |
 | `git clone -b <branch> <url>` | Clone a specific branch      |
 
