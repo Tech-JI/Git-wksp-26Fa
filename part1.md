@@ -198,7 +198,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 ## Tips
 
-- If Ctrl+V doesn't paste, use Ctrl+Shift+V or right-click to paste in shell
+- If Ctrl+V doesn't paste, try Ctrl+Shift+V or right-click to paste in shell
 
 - Tab-completion
 
