@@ -47,13 +47,13 @@ header-includes: |
 - We learn Git because it's:
   - Required in ENGR1010J, ENGR1510J, and later courses
 
-  - Useful for version control, i.e. no more "presentation_v4_final_real_(3).pptx"
+  - Useful for version control, i.e. no more "presentation_v4_final_real (3).pptx"
 
   - Useful for project collaboration, i.e. no more sharing code through WeChat
 
 ## Surprising use of Git
 
-- [pass](https://www.passwordstore.org/): a password manager using Git to track and sync passwords
+- [pass](https://www.passwordstore.org/): a password manager using Git to store and sync passwords
 
 - [sindresorhus/awesome](https://github.com/sindresorhus/awesome): an online Git repository containing everything you'll ever need to self-study any subject in Computer Science
 
