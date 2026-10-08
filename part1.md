@@ -57,6 +57,10 @@ header-includes: |
 
 - [sindresorhus/awesome](https://github.com/sindresorhus/awesome): online Git repository containing self-study materials for Computer Science
 
+## Project
+
+![Screenshot of the racing game](img/game_screenshot.png)
+
 - It's our turn! We're gonna **build our own racing game** with Git. One config file, four roles, and a change you can see the moment you reload the page. Your group's starting repository is at `[repository-url]`.
 
 ## Enter shell
@@ -202,8 +206,6 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 - Go to home directory (`cd`), create new directory (`mkdir`), list files (`ls`), move into the directory (`cd`), create some files in it (`nano` or `code`), rename files (`mv`), then delete them (`rm`)
 
-- Take a look at what you are about to clone. Everything the game does lives in one file, `config.js` - and every change you make to it today is visible the moment you reload the page
-
 ## Going further
 
 - Advanced topics: [Bash Guide](https://mywiki.wooledge.org/BashGuide) and [Bash Pitfalls](https://mywiki.wooledge.org/BashPitfalls)
@@ -274,6 +276,8 @@ Targets:
 
 - Clone your remote repository to local
 
+- Take a look at what you are about to clone. Everything the game does lives in one file, `config.js` - and every change you make to it today is visible the moment you reload the page
+
 ## The three zones
 
 \center
@@ -321,7 +325,7 @@ sequenceDiagram
 
 - Staged: files that are modified and marked to be included in the next snapshot
 
-## How to move files between these zones and states
+## How to move files between the zones and states
 
 \small
 
