@@ -21,6 +21,10 @@ header-includes: |
 
 # Introduction
 
+## A personal anecdote
+
+- How Git could have saved me (and you!) an hour's work of Vy100 essay
+
 ## Alternatives to Git Workshop
 
 - Google "how to use git", "git tutorial"
@@ -29,13 +33,9 @@ header-includes: |
 
 - Ask AI
 
-## A personal anecdote
-
-- How Git could have saved me (and you!) an hour's work of Vy100 essay
-
 ## The what and the why
 
-- Git is a free and open source distributed version control system
+- A free and open source distributed version control system
 
 - Famous software developed with Git
   - [Linux](https://github.com/torvalds/linux)
