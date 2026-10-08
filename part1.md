@@ -200,7 +200,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 ## Practice
 
-- Go to home directory (`cd`), create new directory (`mkdir`), list directories (`ls`), move into the directory (`cd`), create some files in it (`nano` or `code`), rename files (`mv`), then delete them (`rm`)
+- Go to home directory (`cd`), create new directory (`mkdir`), list files (`ls`), move into the directory (`cd`), create some files in it (`nano` or `code`), rename files (`mv`), then delete them (`rm`)
 
 - Take a look at what you are about to clone. Everything the game does lives in one file, `config.js` - and every change you make to it today is visible the moment you reload the page
 
