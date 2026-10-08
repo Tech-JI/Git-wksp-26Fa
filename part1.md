@@ -99,6 +99,53 @@ header-includes: |
 
 ![Zsh on Linux](img/manjaro_kitty.png)
 
+## Unix Filesystem
+
+\center
+
+```{.mermaid caption="Unix Filesystem" format=pdf width=300}
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily": "monospace",
+    "fontSize": "22px",
+    "lineColor": "#b83a12",
+    "primaryColor": "#ffffff",
+    "primaryBorderColor": "#ffffff",
+    "primaryTextColor": "#000000"
+  },
+  "flowchart": {
+    "curve": "linear",
+    "nodeSpacing": 55,
+    "rankSpacing": 65
+  }
+}}%%
+
+flowchart TD
+    root["/"]
+
+    root --- bin["bin/"]
+    root --- home["home/"]
+    root --- lib["lib/"]
+    root --- more["..."]
+
+    home --- mary["mary/"]
+    home --- peter["peter/"]
+    home --- users_more["..."]
+
+    lib --- lib64["lib64/"]
+    lib --- modules["modules/"]
+    lib --- lib_more["..."]
+
+    classDef directory fill:transparent,stroke:transparent,color:#000;
+    classDef ellipsis fill:transparent,stroke:transparent,color:#000;
+
+    class root,bin,home,lib,mary,peter,lib64,modules directory;
+    class more,users_more,lib_more ellipsis;
+
+    linkStyle default stroke:#b83a12,stroke-width:2px;
+```
+
 ## Special directories
 
 <!--prettier-ignore-->
