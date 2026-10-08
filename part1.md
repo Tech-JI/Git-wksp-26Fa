@@ -45,7 +45,7 @@ header-includes: |
   - [Visual Studio Code](https://github.com/microsoft/vscode)
 
 - We learn Git because it's:
-  - Required in ENGL1010J and ENGL1510J
+  - Required in ENGR1010J and ENGR1510J
 
   - Useful for version control
 
