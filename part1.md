@@ -214,11 +214,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 ## Git installation
 
-- Windows native: download setup program and double click
-
-- WSL and Linux: use the package manager of your distro. Configure a mirror to increase speed
-
-- Refer to [Git-installation.pdf](Git-installation.pdf) to install Git
+- See [Git-installation.pdf](Git-installation.pdf)
 
 ## Git config username & email
 
