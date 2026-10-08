@@ -63,7 +63,7 @@ header-includes: |
 
 ![Use git cli](img/git_gui_cli.png){ width=150px }
 
-- Not so fast! Don't just download the files in your browser. Use shell instead, which leads us to...
+- Not so fast! Don't just download the files in your browser. Use **shell** instead, which leads us to...
 
 # Shell 101
 
@@ -71,9 +71,9 @@ header-includes: |
 
 - Q: What is shell?
 
-- A: Command interpreters, allowing users to give commands to their OS. A layer between system function calls and the user
+- A: Command interpreters, allowing users to **give commands to their OS**. A layer between the system and the user
 
-- Q: Wait but what does shell have to do with Git workshop?
+- Q: Okay but what does shell have to do with Git workshop?
 
 - A: Because we need shell to send Git (and other) commands to our OS
 
