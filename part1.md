@@ -59,7 +59,7 @@ header-includes: |
 
 ## Project
 
-![Screenshot of the racing game](img/game_screenshot.png)
+![Screenshot of the racing game](img/game_screenshot.png){ width=60% }
 
 - It's our turn! We're gonna **build our own racing game** with Git. One config file, four roles, and a change you can see the moment you reload the page. Your group's starting repository is at `[repository-url]`.
 
