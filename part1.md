@@ -81,7 +81,7 @@ header-includes: |
 
 - A: Because we need shell to send Git (and other) commands to our OS
 
-- Conventions: Monospace for commands and code. Brackets ([]) for optional arguments, angle brackets (<>) for mandatory arguments, vertical bars (|) separate choices, and ellipses (...) can be repeated.
+- Conventions: `Monospace` for commands and code. Brackets ([]) for optional arguments, angle brackets (<>) for mandatory arguments, vertical bars (|) separate choices, and ellipses (...) can be repeated.
 
 ## Different kinds of shell
 
