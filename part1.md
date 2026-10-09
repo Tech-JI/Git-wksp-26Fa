@@ -298,7 +298,6 @@ A repository is:
   label/.style={font=\sffamily\bfseries\fontsize{16}{19}\selectfont,text=ink},
   detail/.style={font=\sffamily\fontsize{10}{12}\selectfont,text=muted},
   flow/.style={draw=muted!80,line width=1.2pt,-{Stealth[length=2.7mm,width=2mm]}}]
-  \fill[white] (0,0) rectangle (18,6.4);
   % Three equally spaced visual centers retain the original composition.
   \path[draw=work,fill=workfill,line width=1.8pt,rounded corners=2pt]
     (1.35,2.5) -- (1.35,4.65) -- (2.3,4.65) -- (2.55,4.25)
@@ -438,11 +437,13 @@ View the submission history
 
 ## `git diff`
 
-Display the differences among the working directory, staging area, and commits
+Display the differences between the working directory, staging area, and commits
 
 \begin{figure}[htbp]
 \centering
-\resizebox{0.6\textwidth}{!}{%
+\begin{minipage}{.45\textwidth}
+\centering
+\resizebox{\textwidth}{!}{%
 \begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,
   state/.style={draw=theme,fill=workfill,line width=1.4pt,
     rounded corners=3pt,minimum width=5cm,minimum height=1.05cm,
@@ -451,7 +452,6 @@ Display the differences among the working directory, staging area, and commits
     text=ink,fill=white,inner sep=7pt},
   flow/.style={draw=muted!80,line width=1.3pt,-{Stealth[length=2.7mm,width=2mm]}},
   comparison/.style={draw=theme,line width=1.4pt}]
-  \fill[white] (0,0) rectangle (14,11);
   \node[state] (working) at (3,9.3) {Working directory};
   \node[state] (index) at (3,5.5) {Index};
   \node[state] (head) at (3,1.7) {HEAD};
@@ -477,6 +477,43 @@ Display the differences among the working directory, staging area, and commits
 }%
 \caption{\texttt{git diff} commands}
 \label{fig:diff}
+\end{minipage}
+\hfill
+\begin{minipage}{.45\textwidth}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,
+  commit/.style={draw=muted!55,fill=white,line width=1.2pt,
+    rounded corners=3pt,minimum width=5.8cm,minimum height=1.35cm,
+    align=center,font=\sffamily\fontsize{12}{15}\selectfont,text=ink},
+  selected/.style={commit,draw=theme,fill=workfill,line width=1.4pt},
+  comparison/.style={draw=theme,line width=1.4pt},
+  command/.style={font=\ttfamily\fontsize{13}{16}\selectfont,
+    text=theme,fill=white,inner sep=8pt}]
+  \node[selected] (first) at (4,9)
+    {{\ttfamily\bfseries\fontsize{15}{18}\selectfont a1b2c3d}\\[5pt]chore: initialize project};
+  \node[commit] (second) at (4,6.7)
+    {{\ttfamily\bfseries\fontsize{15}{18}\selectfont e4f5a6b}\\[5pt]feat: add CLI};
+  \node[selected] (third) at (4,4.4)
+    {{\ttfamily\bfseries\fontsize{15}{18}\selectfont c7d8e9f}\\[5pt]test: add unit tests};
+  \node[commit] (fourth) at (4,2.1)
+    {{\ttfamily\bfseries\fontsize{15}{18}\selectfont 2a3b4c5}\\[5pt]docs: update README};
+  % Git history arrows point from each child commit to its parent.
+  \foreach \child/\parent in {second/first,third/second,fourth/third}{
+    \draw[muted!80,line width=1.3pt,-{Stealth[length=2.7mm,width=2mm]}]
+      (\child.north) -- (\parent.south);
+  }
+  \draw[comparison,-{Stealth[length=2.7mm,width=2mm]}]
+    (10.5,9) -- (first.east);
+  \draw[comparison,-{Stealth[length=2.7mm,width=2mm]}]
+    (10.5,4.4) -- (third.east);
+  \draw[comparison] (10.5,9) -- (10.5,4.4);
+  \node[command] at (10.5,6.7) {git diff a1b2c3d c7d8e9f};
+\end{tikzpicture}
+}%
+\caption{\texttt{git diff} between commits}
+\label{fig:diff-commits}
+\end{minipage}
 \end{figure}
 
 ## `git diff`
