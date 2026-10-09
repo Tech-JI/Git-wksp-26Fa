@@ -15,7 +15,6 @@ header-includes: |
   \usepackage{caption}
   \usetikzlibrary{arrows.meta}
   \setbeamertemplate{headline}{}
-  \lstset{basicstyle=\ttfamily,frame=single,frameround=tttt,columns=fullflexible,keepspaces=true,backgroundcolor=\color{yellow!20}}
   \definecolor{ink}{HTML}{000000}
   \definecolor{muted}{HTML}{666666}
   \definecolor{theme}{HTML}{3333B2}
@@ -23,6 +22,7 @@ header-includes: |
   \colorlet{workfill}{theme!7}
   \colorlet{stage}{theme}
   \colorlet{head}{theme}
+  \lstset{basicstyle=\ttfamily,frame=single,frameround=tttt,columns=fullflexible,keepspaces=true,backgroundcolor=\color{workfill}}
   \captionsetup[figure]{labelformat=empty}
 ---
 
@@ -38,7 +38,7 @@ How Git could have saved me (and you!) an hour's work of Vy100 essay
 
 ## Alternatives to Git Workshop
 
-- Google ``how to use git'', ``git tutorial''
+- Google "how to use git", "git tutorial"
 
 - [Pro Git](https://git-scm.com/book/en/v2)
 
@@ -58,7 +58,7 @@ How Git could have saved me (and you!) an hour's work of Vy100 essay
 - We learn Git because it's:
   - Required in ENGR1010J, ENGR1510J, and later courses
 
-  - Better version control: no more ``presentation_v4_final_real (3).pptx''
+  - Better version control: no more "presentation_v4_final_real (3).pptx"
 
   - Better project collaboration: no more sharing code through WeChat
 
@@ -539,15 +539,20 @@ index 1234567..89abcde 100644
 
 **TIP:** This command is a powerful tool for code review and debugging!
 
-## Basic workflow
+## Quick summary
 
-```
-git clone / git init -> git status -> edit -> git add
-                             ^                   V
-                        git commit <------ git status
-```
-
+:::::::::::::: {.columns align=center}
+::: {.column width="50%"}
+1. `git init` or `git clone`
+2. Edit files
+3. `git add`
+4. `git commit`
+5. Go to step 2
+:::
+::: {.column width="50%"}
 ![When you `commit` before `add`](img/commit_before_add.png){ width=150px }
+:::
+::::::::::::::
 
 ## Practice
 
