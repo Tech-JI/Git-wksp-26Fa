@@ -192,7 +192,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 - nano: Use `nano <FILE>` (WSL or Linux)
 
-- VS Code: Use `code <FILE | DIRECTORY>`. VS Code should be added to `PATH` environment variable on Windows. Follow the guide [for Windows 10](https://stackoverflow.com/questions/44272416/add-a-folder-to-the-path-environment-variable-in-windows-10-with-screenshots) or [11](https://superuser.com/questions/1861276/how-to-set-a-folder-to-the-path-environment-variable-in-windows-11). Reopen shell after this
+- VS Code: Use `code <FILE | DIRECTORY>`. If this doesn't work, add VS Code to `PATH` environment variable on Windows. Follow the guide [for Windows 10](https://stackoverflow.com/questions/44272416/add-a-folder-to-the-path-environment-variable-in-windows-10-with-screenshots) or [11](https://superuser.com/questions/1861276/how-to-set-a-folder-to-the-path-environment-variable-in-windows-11). Reopen shell after this
 
 - Other text editors: Vim, Emacs, ed, etc.
 
