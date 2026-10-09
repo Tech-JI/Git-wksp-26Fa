@@ -446,10 +446,7 @@ index 1234567..89abcde 100644
 
 - View the submission history
 
-![git-log](img/git-log.jpg)
-
-- “HEAD -> master”: You are currently in the master branch.
-- “origin/master”: The locally recorded position of the remote `master` branch.
+![git log example](img/git-log.jpg)
 
 ## Basic workflow
 
