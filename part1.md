@@ -408,7 +408,7 @@ A repository is:
 
 Display the current status of the working directory and staging area
 
-\footnotesize
+\scriptsize
 
 ```
 $ git status
@@ -429,6 +429,12 @@ Untracked files:
 ```
 
 \normalsize
+
+## `git log`
+
+View the submission history
+
+![git log example](img/git-log.jpg)
 
 ## `git diff`
 
@@ -493,12 +499,6 @@ index 1234567..89abcde 100644
 \normalsize
 
 **TIP:** This command is a powerful tool for code review and debugging!
-
-## `git log`
-
-View the submission history
-
-![git log example](img/git-log.jpg)
 
 ## Basic workflow
 
