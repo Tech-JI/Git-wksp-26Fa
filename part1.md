@@ -228,7 +228,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 - For [FOCS Git](https://focs.ji.sjtu.edu.cn/git/), `EMAIL` must be your SJTU email
 
-![Git config impersonation](img/git-config-impersonation.png){ width=250px }
+![Git config impersonation (DONT do this)](img/git-config-impersonation.png){ width=250px }
 
 ## Git config text editor & ssh
 
@@ -252,9 +252,9 @@ A repository is:
 
 - **Warning: for each repo, either run `git init` or `git clone`, but never both**
 
-- Use `git init` in local existing project directory
+- Use `git init` in **local** existing project directory
 
-- Use `git clone` to copy a remote directory with all its files and histories to your local computer
+- Use `git clone` to copy a **remote** directory with all its files and histories to your local computer
 
 \small
 
@@ -274,7 +274,7 @@ Targets:
 
 - Change directory to `~/git_wksp`
 
-- Clone your remote repository to local
+- Clone your remote repository to local. URL is `[repository-url]`
 
 - Take a look at what you are about to clone. Everything the game does lives in one file, `config.js` - and every change you make to it today is visible the moment you reload the page
 
