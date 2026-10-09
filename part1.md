@@ -47,9 +47,11 @@ header-includes: |
 - We learn Git because it's:
   - Required in ENGR1010J, ENGR1510J, and later courses
 
-  - Useful for version control, i.e. no more "presentation_v4_final_real (3).pptx"
+  - Better version control: no more "presentation_v4_final_real (3).pptx"
 
-  - Useful for project collaboration, i.e. no more sharing code through WeChat
+  - Better project collaboration: no more sharing code through WeChat
+
+  - Better attribution: easier to determine who's responsible for what
 
 ## Git: More than software development
 
