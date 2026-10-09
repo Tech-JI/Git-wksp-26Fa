@@ -239,7 +239,7 @@ See [Git-installation.pdf](Git-installation.pdf)
 
 ## Git config authenticity {shrink=8}
 
-For [FOCS Git](https://focs.ji.sjtu.edu.cn/git/), `EMAIL` must be your SJTU email
+For [FOCS Git](https://focs.gc.sjtu.edu.cn/git/), `EMAIL` must be your SJTU email
 
 ![Git config impersonation (**DONT** do this)](img/git-config-impersonation.png){ width=250px }
 
