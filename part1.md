@@ -32,11 +32,11 @@ header-includes: |
 
 ## A personal anecdote
 
-- How Git could have saved me (and you!) an hour's work of Vy100 essay
+How Git could have saved me (and you!) an hour's work of Vy100 essay
 
 ## Alternatives to Git Workshop
 
-- Google "how to use git", "git tutorial"
+- Google ``how to use git'', ``git tutorial''
 
 - [Pro Git](https://git-scm.com/book/en/v2)
 
@@ -56,7 +56,7 @@ header-includes: |
 - We learn Git because it's:
   - Required in ENGR1010J, ENGR1510J, and later courses
 
-  - Better version control: no more "presentation_v4_final_real (3).pptx"
+  - Better version control: no more ``presentation_v4_final_real (3).pptx''
 
   - Better project collaboration: no more sharing code through WeChat
 
@@ -72,13 +72,13 @@ header-includes: |
 
 ![Screenshot of the racing game](img/game_screenshot.png){ width=60% }
 
-- It's our turn! We're gonna **build our own racing game** with Git. One config file, four roles, and a change you can see the moment you reload the page. Your group's starting repository is at `[repository-url]`.
+It's our turn! We're gonna **build our own racing game** with Git. One config file, four roles, and a change you can see the moment you reload the page. Your group's starting repository is at `[repository-url]`.
 
 ## Enter shell
 
 ![Use git cli](img/git_gui_cli.png){ width=150px }
 
-- Not so fast! Don't just download the files in your browser. Use **shell** instead, which leads us to...
+Not so fast! Don't just download the files in your browser. Use **shell** instead, which leads us to...
 
 # Shell 101
 
@@ -197,7 +197,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 \normalsize
 
-- More information: use `COMMAND -h`, `COMMAND --help`, `man COMMAND`, or google "COMMAND man page"
+More information: use `COMMAND -h`, `COMMAND --help`, `man COMMAND`, or google "COMMAND man page"
 
 ## Invoke text editor in shell
 
@@ -215,7 +215,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 ## Practice
 
-- Go to home directory (`cd`), create new directory (`mkdir`), list files (`ls`), move into the directory (`cd`), create some files in it (`nano` or `code`), rename files (`mv`), then delete them (`rm`)
+Go to home directory (`cd`), create new directory (`mkdir`), list files (`ls`), move into the directory (`cd`), create some files in it (`nano` or `code`), rename files (`mv`), then delete them (`rm`)
 
 ## Going further
 
@@ -227,7 +227,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 ## Git installation
 
-- See [Git-installation.pdf](Git-installation.pdf)
+See [Git-installation.pdf](Git-installation.pdf)
 
 ## Git config username & email
 
@@ -237,7 +237,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 ## Git config authenticity {shrink=8}
 
-- For [FOCS Git](https://focs.ji.sjtu.edu.cn/git/), `EMAIL` must be your SJTU email
+For [FOCS Git](https://focs.ji.sjtu.edu.cn/git/), `EMAIL` must be your SJTU email
 
 ![Git config impersonation (**DONT** do this)](img/git-config-impersonation.png){ width=250px }
 
@@ -285,7 +285,11 @@ A repository is:
 
 - Take a look at what you have cloned. In today's workshop you only need to modify `config.js`. Changes are visible after refreshing the page
 
-## Basic workflow
+```{=latex}
+\end{frame}
+\begin{frame}
+\frametitle<1>{The three zones}
+\frametitle<2>{Basic Git commands}
 
 \begin{figure}[htbp]
 \centering
@@ -335,13 +339,18 @@ A repository is:
 \caption{Basic Git workflow}
 \label{fig:workflow}
 \end{figure}
+```
 
+```{=latex}
+\only<1>{%
+```
 - Working directory: Actual files on your computer
 - Index / staging area: Files to be committed; propose changes
 - `HEAD` / repository: Last commit you've made
-
-## Git commands
-
+```{=latex}
+}%
+\only<2>{%
+```
 \small
 
 <!--prettier-ignore-->
@@ -352,6 +361,9 @@ A repository is:
 | `git commit -m <MESSAGE>`     | Commit changes |
 
 \normalsize
+```{=latex}
+}%
+```
 
 ## Commit message
 
@@ -388,8 +400,7 @@ A repository is:
 | ------------------------ | ---------------------------------------------- |
 | `git status`             | Show current status of files |
 | `git log`                | Show commit history                                   |
-| `git diff`               | Show changes between commits, commit and working tree |
-| `git diff --staged`      | Show changes between staging area and last commit     |
+| `git diff`               | Show changes |
 
 \normalsize
 
@@ -422,6 +433,47 @@ Untracked files:
 ## `git diff`
 
 - Display the differences among the working directory, staging area, and commits
+
+\begin{figure}[htbp]
+\centering
+\resizebox{0.6\textwidth}{!}{%
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,
+  state/.style={draw=theme,fill=workfill,line width=1.4pt,
+    rounded corners=3pt,minimum width=5cm,minimum height=1.05cm,
+    align=center,font=\sffamily\bfseries\fontsize{16}{19}\selectfont,text=ink},
+  command/.style={font=\ttfamily\fontsize{13}{16}\selectfont,
+    text=ink,fill=white,inner sep=7pt},
+  flow/.style={draw=muted!80,line width=1.3pt,-{Stealth[length=2.7mm,width=2mm]}},
+  comparison/.style={draw=theme,line width=1.4pt}]
+  \fill[white] (0,0) rectangle (14,11);
+  \node[state] (working) at (3,9.3) {Working directory};
+  \node[state] (index) at (3,5.5) {Index};
+  \node[state] (head) at (3,1.7) {HEAD};
+
+  \draw[flow] (working.south) -- (index.north)
+    node[midway,command] {git add};
+  \draw[flow] (index.south) -- (head.north)
+    node[midway,command] {git commit};
+
+  % Shared horizontal connectors give each state a single arrowhead.
+  \draw[comparison,-{Stealth[length=2.7mm,width=2mm]}]
+    (12,9.3) -- (working.east);
+  \draw[comparison,-{Stealth[length=2.7mm,width=2mm]}]
+    (8.1,5.5) -- (index.east);
+  \draw[comparison,-{Stealth[length=2.7mm,width=2mm]}]
+    (12,1.7) -- (head.east);
+  \draw[comparison] (8.1,9.3) -- (8.1,1.7);
+  \node[command,text=theme] at (8.1,7.4) {git diff};
+  \node[command,text=theme] at (8.1,3.6) {git diff -{}-staged};
+  \draw[comparison] (12,9.3) -- (12,1.7);
+  \node[command,text=theme,rotate=90] at (12,5.5) {git diff HEAD};
+\end{tikzpicture}
+}%
+\caption{\texttt{git diff} commands}
+\label{fig:diff}
+\end{figure}
+
+## `git diff`
 
 \small
 
