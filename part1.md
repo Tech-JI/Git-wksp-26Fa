@@ -85,7 +85,7 @@ header-includes: |
 
 ## Different kinds of shell
 
-- Identify the type of your Git installation and its corresponding shell
+- Identify your Git installation and its corresponding shell
 
 | Installation type | Shell                  |
 | ----------------- | ---------------------- |
@@ -93,7 +93,7 @@ header-includes: |
 | WSL               | Bash                   |
 | Dual-boot Linux   | Bash                   |
 
-- We use WSL and Linux shell as example in this workshop. Git Bash is pretty similar
+- We use **WSL** and **Linux shell** as example in this workshop. Git Bash is pretty similar
 
 ## WSL shell UI
 
