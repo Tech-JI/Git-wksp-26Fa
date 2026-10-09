@@ -258,19 +258,15 @@ A repository is:
 
 \small
 
-| Command                       | Function                     |
-| ----------------------------- | ---------------------------- |
-| `git clone <url>`  | Basic cloning                |
-| `git clone <url> <dir>`       | Clone to specified directory |
-| `git clone -b <branch> <url>` | Clone a specific branch      |
+| Command                 | Function                       |
+| ----------------------- | ------------------------------ |
+| `git clone <URL> [DIR]` | Clone repo from `URL` to `DIR` |
 
 \normalsize
 
 ## Practice
 
 **Exercise 1: Remote to Local**
-
-Targets:
 
 - Change directory to `~/git_wksp`
 
