@@ -272,7 +272,7 @@ A repository is:
 
 - Clone your remote repository to local. URL is `[repository-url]`
 
-- Take a look at what you are about to clone. Everything the game does lives in one file, `config.js` - and every change you make to it today is visible the moment you reload the page
+- Take a look at what you have cloned. In today's workshop you only need to modify `config.js`. Changes are visible after refreshing the page
 
 ## The three zones
 
