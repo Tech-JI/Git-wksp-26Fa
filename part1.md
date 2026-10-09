@@ -406,7 +406,7 @@ A repository is:
 
 ## `git status`
 
-- Display the current status of the working directory and staging area
+Display the current status of the working directory and staging area
 
 \footnotesize
 
@@ -432,7 +432,7 @@ Untracked files:
 
 ## `git diff`
 
-- Display the differences among the working directory, staging area, and commits
+Display the differences among the working directory, staging area, and commits
 
 \begin{figure}[htbp]
 \centering
@@ -496,7 +496,7 @@ index 1234567..89abcde 100644
 
 ## `git log`
 
-- View the submission history
+View the submission history
 
 ![git log example](img/git-log.jpg)
 
