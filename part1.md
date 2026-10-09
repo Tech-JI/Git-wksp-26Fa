@@ -242,7 +242,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 A repository is:
 
-- a central storage location for a project's files and their complete revision history
+- a central storage location for a project's **files** and their complete **revision history**
 
 - stored in a hidden `.git` folder in your project root directory
 
