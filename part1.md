@@ -890,6 +890,14 @@ The content between `<<<<<<< HEAD` and `=======` is from your current branch.
 
 The content between `=======` and `>>>>>>> branch-name` is from the branch you're merging.
 
+```{=latex}
+\end{frame}
+\begin{frame}
+\frametitle{Understanding conflict markers}
+```
+
+![Beginner Git user meets merge conflicts](img/git-merge-conflict-meme.jpeg){ width=70% }
+
 ## Steps to resolve a conflict
 
 \small
@@ -970,17 +978,28 @@ This is the content I want to keep
 
 ## Practice
 
+:::::::::::::: {.columns align=center}
+::: {.column width="55%"}
 **Exercise 4: Merge & Conflict**
 
 Targets:
 
-- Everyone pushes changes to the remote repository
+- Create and switch to a new branch: `git checkout -b b1`
 
-- Choose a team member to pull all changes to his/her local repository
+- Edit one line in `config.js`, then commit
 
-- Merge all branches into `master` and resolve the conflicts in `config.js`
+- Switch back to `master`
 
-- Tag the merged result `v1.0` and push
+- Edit the same line on `master`, then commit
+
+- Merge the branch back: `git merge b1`
+
+- Resolve the conflict and keep the local version
+:::
+::: {.column width="45%"}
+![Merged with no conflicts? Suspicious](img/git-merge-no-conflicts-meme.jpeg){ width=95% }
+:::
+::::::::::::::
 
 # Other common Git issues
 
@@ -1018,6 +1037,14 @@ Targets:
 **Side note**: If you have already pushed to remote, its recommended to fix **4** and **5** with another commit, because the command above will modify git history.
 
 \normalsize
+
+```{=latex}
+\end{frame}
+\begin{frame}
+\frametitle{Common issues (cont.)}
+```
+
+![Fixed 34 bugs in the wrong branch](img/git-wrong-branch-meme.jpeg){ width=70% }
 
 ## \quad
 
