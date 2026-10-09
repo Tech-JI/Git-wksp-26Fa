@@ -12,6 +12,7 @@ linkcolor: .
 urlcolor: blue
 header-includes: |
   \usepackage{tikz}
+  \usepackage{caption}
   \usetikzlibrary{arrows.meta}
   \setbeamertemplate{headline}{}
   \lstset{basicstyle=\ttfamily,frame=single,frameround=tttt,columns=fullflexible,keepspaces=true,backgroundcolor=\color{yellow!20}}
@@ -22,6 +23,7 @@ header-includes: |
   \colorlet{workfill}{theme!7}
   \colorlet{stage}{theme}
   \colorlet{head}{theme}
+  \captionsetup[figure]{labelformat=empty}
 ---
 
 ## Contents
