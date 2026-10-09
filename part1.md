@@ -254,7 +254,7 @@ A repository is:
 
 - Use `git init` in **local** existing project directory
 
-- Use `git clone` to copy a **remote** directory with all its files and histories to your local computer
+- Use `git clone` to copy a **remote** repository to your local computer
 
 \small
 
