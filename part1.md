@@ -435,7 +435,7 @@ Untracked files:
 
 View the submission history
 
-![git log example](img/git-log.jpg)
+![`git log` example](img/git-log.jpg)
 
 ## `git diff`
 
@@ -547,7 +547,7 @@ git clone / git init -> git status -> edit -> git add
                         git commit <------ git status
 ```
 
-![When you commit before add](img/commit_before_add.png){ width=150px }
+![When you `commit` before `add`](img/commit_before_add.png){ width=150px }
 
 ## Practice
 
