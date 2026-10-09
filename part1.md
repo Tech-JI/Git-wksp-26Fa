@@ -419,18 +419,11 @@ Untracked files:
 
 \normalsize
 
-## `git diff` {shrink=8}
+## `git diff`
+
+- Display the differences among the working directory, staging area, and commits
 
 \small
-
-- Display the differences among the working directory, staging area, and commit
-
-- Sample Input & Output
-
-- Input :\
-  `git diff`
-
-- Output :
 
 ```diff
 diff --git a/example.js b/example.js
@@ -445,9 +438,9 @@ index 1234567..89abcde 100644
  }
 ```
 
-**TIP:** This command is a powerful tool for code review and debugging!
-
 \normalsize
+
+**TIP:** This command is a powerful tool for code review and debugging!
 
 ## `git log`
 
