@@ -11,8 +11,17 @@ colorlinks: true
 linkcolor: .
 urlcolor: blue
 header-includes: |
+  \usepackage{tikz}
+  \usetikzlibrary{arrows.meta}
   \setbeamertemplate{headline}{}
   \lstset{basicstyle=\ttfamily,frame=single,frameround=tttt,columns=fullflexible,keepspaces=true,backgroundcolor=\color{yellow!20}}
+  \definecolor{ink}{HTML}{000000}
+  \definecolor{muted}{HTML}{666666}
+  \definecolor{theme}{HTML}{3333B2}
+  \colorlet{work}{theme}
+  \colorlet{workfill}{theme!7}
+  \colorlet{stage}{theme}
+  \colorlet{head}{theme}
 ---
 
 ## Contents
@@ -276,54 +285,62 @@ A repository is:
 
 - Take a look at what you have cloned. In today's workshop you only need to modify `config.js`. Changes are visible after refreshing the page
 
-## The three zones
+## Basic workflow
 
-\center
+\begin{figure}[htbp]
+\centering
+\resizebox{0.8\textwidth}{!}{%
+\begin{tikzpicture}[x=1cm,y=1cm,line cap=round,line join=round,
+  label/.style={font=\sffamily\bfseries\fontsize{16}{19}\selectfont,text=ink},
+  detail/.style={font=\sffamily\fontsize{10}{12}\selectfont,text=muted},
+  flow/.style={draw=muted!80,line width=1.2pt,-{Stealth[length=2.7mm,width=2mm]}}]
+  \fill[white] (0,0) rectangle (18,6.4);
+  % Three equally spaced visual centers retain the original composition.
+  \path[draw=work,fill=workfill,line width=1.8pt,rounded corners=2pt]
+    (1.35,2.5) -- (1.35,4.65) -- (2.3,4.65) -- (2.55,4.25)
+    -- (4.55,4.25) -- (4.55,2.5) -- cycle;
+  \draw[work!45,line width=1pt] (1.65,3.98) -- (4.24,3.98);
 
-```{.mermaid caption="The three zones" format=pdf width=300 height=100 }
-sequenceDiagram
-    participant wd as Working Directory
-    participant sa as Staging Area
-    participant repo as Repository
-    repo->>wd: Checkout the project
-    wd->>sa: Stage Fixes
-    sa->>repo: Commit
-```
+  \begin{scope}[shift={(8.35,2.05)},draw=stage,line width=1.65pt,
+    dash pattern=on 3.6pt off 3.4pt]
+    \draw (0,0.2) -- (0,2.95);
+    \draw (0,2.4) -- (1.75,2.4);
+    \draw (0.7,2.4) -- (0.7,0.95);
+    \foreach \y in {1.9,1.4,0.95}{\draw (0.7,\y) -- (1.75,\y);}
+    \draw (0,0.4) -- (1.75,0.4);
+    \draw (0.7,0.4) -- (0.7,-0.05) -- (1.4,-0.05);
+  \end{scope}
 
-- Working directory: "Ready", current state of local files
+  \begin{scope}[shift={(14.65,2.05)},draw=head,line width=1.8pt]
+    \draw (0,0.2) -- (0,2.95);
+    \draw (0,2.4) -- (1.75,2.4);
+    \draw (0.7,2.4) -- (0.7,0.95);
+    \foreach \y in {1.9,1.4,0.95}{\draw (0.7,\y) -- (1.75,\y);}
+    \draw (0,0.4) -- (1.75,0.4);
+    \draw (0.7,0.4) -- (0.7,-0.05) -- (1.4,-0.05);
+  \end{scope}
 
-- Staging area: "Set", files to be committed
+  \draw[flow] (5.05,3.5) -- (7.45,3.5);
+  \node[font=\ttfamily\fontsize{12}{14}\selectfont,text=ink] at (6.25,3.96) {git add};
+  \draw[flow] (11.2,3.5) -- (13.6,3.5);
+  \node[font=\ttfamily\fontsize{12}{14}\selectfont,text=ink] at (12.4,3.96) {git commit};
 
-- Repository: "Go", snapshots permanently stored. **Immutable**
+  \node[label] at (2.95,1.25) {Working directory};
+  \node[label] at (9.22,1.25) {Index};
+  \node[label] at (15.52,1.25) {HEAD};
+  \node[detail] at (9.22,0.68) {Staging area};
+  \node[detail] at (15.52,0.68) {Current commit};
+\end{tikzpicture}
+}%
+\caption{Basic Git workflow}
+\label{fig:workflow}
+\end{figure}
 
-- `HEAD`: A special pointer to the current working commit in the repository
+- Working directory: Actual files on your computer
+- Index / staging area: Files to be committed; propose changes
+- `HEAD` / repository: Last commit you've made
 
-## The four states {shrink=8}
-
-\center
-
-```{.mermaid caption="Four states of a file" format=pdf width=300}
-sequenceDiagram
-    participant ut as Untracked
-    participant um as Unmodified
-    participant m as Modified
-    participant s as Staged
-    ut->>s: Add the file
-    um->>m: Edit the file
-    m->>s: Stage the file
-    um->>ut: Remove the file
-    s->>um: Commit
-```
-
-- Untracked: files Git has yet to know about
-
-- Unmodified: files that haven't been modified since last snapshot. Also called committed from a different POV
-
-- Modified: files that have been modified but not staged
-
-- Staged: files that are modified and marked to be included in the next snapshot
-
-## How to move files between the zones and states
+## Git commands
 
 \small
 
@@ -336,7 +353,7 @@ sequenceDiagram
 
 \normalsize
 
-## Additional Git Commands
+## Additional Git commands
 
 \small
 
