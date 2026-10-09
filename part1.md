@@ -228,7 +228,7 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 - For [FOCS Git](https://focs.ji.sjtu.edu.cn/git/), `EMAIL` must be your SJTU email
 
-![Git config impersonation (DONT do this)](img/git-config-impersonation.png){ width=250px }
+![Git config impersonation (**DONT** do this)](img/git-config-impersonation.png){ width=250px }
 
 ## Git config text editor & ssh
 
