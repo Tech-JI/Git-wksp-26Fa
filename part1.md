@@ -347,9 +347,35 @@ A repository is:
 <!--prettier-ignore-->
 | Command                       | Description                                            |
 | ----------------------------- | -------------------------------------- |
-| `git add <file>`              | Add file to staging area                               |
-| `git restore --staged` `<file>` | Remove file from staging area                          |
-| `git commit -m <message>`     | Commit (i.e. Take a snapshot of) files in staging area |
+| `git add <FILE>`              | Add file to staging area                               |
+| `git restore --staged` `<FILE>` | Remove file from staging area                          |
+| `git commit -m <MESSAGE>`     | Commit changes |
+
+\normalsize
+
+## Commit message
+
+```
+<type>[scope]: <description>
+```
+
+\scriptsize
+
+<!--prettier-ignore-->
+| Description                           | Example                                      |
+| ------------ | ----------------------------------- |
+| New features                         | `git commit -m "feat(ex1): finish problem 3"`       |
+| Bug fixes                               | `git commit -m "fix(ex1): fix dumb mistake"` |
+| Documentation changes                 | `git commit -m "docs: add installation guide"`           |
+| Style changes                    | `git commit -m "style(p1): fix code quality"`   |
+| Refactorization        | `git commit -m "refactor(p1): improve code reuse"` |
+| Test-related changes                  | `git commit -m "test(ex2): add tests for edge cases"` |
+| Maintenance tasks | `git commit -m "chore: bump copyright year to 2026"` |
+
+\small
+
+- JOJ-specific requirements: append `[build JOJ]` to trigger JOJ
+- More information: [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) and [its cheatsheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
 
 \normalsize
 
@@ -367,77 +393,7 @@ A repository is:
 
 \normalsize
 
-## `git add`
-
-\footnotesize
-
-- Add the file changes in the working directory to the staging area, preparing for the next submission
-
-- General Inputs
-
-<!--prettier-ignore-->
-| Command              | Function                                                  |
-| -------------------- | -------------------------------------- |
-| `git add <file>`     | Stage a specific file                                     |
-| `git add <dir>`          | Stage all changes in \<dir\> and subdirectories |
-
-\normalsize
-
-## `git commit`
-
-- Save the changes in the staging area to the version repository and create a new commit record
-
-- General Input
-
-\small
-
-<!--prettier-ignore-->
-| Command               | Function                                                     |
-| --------------------- | ------------------------------------------ |
-| `git commit -m "msg"` | Commit directly and add the commit information               |
-| `git commit`          | Open the text editor to write multiserial commit information |
-| `git commit -a`       | Submit the modifications of all tracked files                |
-
-\normalsize
-
-## Commit message
-
-\vspace{-6pt}
-
-```
-<type>[scope]: <description>
-```
-
-\small
-
-\vspace{-12pt}
-
-- Usage Examples
-
-\vspace{-12pt}
-
-\scriptsize
-
-<!--prettier-ignore-->
-| Description                           | Example (with type)                                      |
-| --------------- | ----------------------------------- |
-| A new feature                         | `git commit -m "feat: implement dark mode` `toggle"`       |
-| Bug fix                               | `git commit -m "fix: correct calculation in` `cart total"` |
-| Documentation changes                 | `git commit -m "docs: add installation guide"`           |
-| Code style changes                    | `git commit -m "style: fix indentation in` `components"`   |
-| Refactor code structure               | `git commit -m "refactor: extract payment service"` |
-| Test-related changes                  | `git commit -m "test: add e2e tests for checkout"` |
-| Maintenance tasks, tooling changes    | `git commit -m "chore: update eslint configuration"` |
-
-\small
-
-\vspace{-12pt}
-
-- More information: [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) and [its cheatsheet](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)
-
-\normalsize
-
-## **`git status`**
+## `git status`
 
 - Display the current status of the working directory and staging area, including which files have been modified, staged or untracked
 
