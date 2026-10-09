@@ -250,7 +250,7 @@ A repository is:
 
 **Create a repository = Create a standardized `.git` folder**
 
-- **Warning: for each repo, either run `git init` or `git clone`, but never both**
+- Warning: for each repo, either run `git init` or `git clone`, but **never both**
 
 - Use `git init` in **local** existing project directory
 
