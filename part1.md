@@ -386,7 +386,7 @@ A repository is:
 <!--prettier-ignore-->
 | Command                  | Description                                           |
 | ------------------------ | ---------------------------------------------- |
-| `git status`             | Show current status of files in working directory     |
+| `git status`             | Show current status of files |
 | `git log`                | Show commit history                                   |
 | `git diff`               | Show changes between commits, commit and working tree |
 | `git diff --staged`      | Show changes between staging area and last commit     |
@@ -395,26 +395,27 @@ A repository is:
 
 ## `git status`
 
-- Display the current status of the working directory and staging area, including which files have been modified, staged or untracked
+- Display the current status of the working directory and staging area
 
-- General Inputs
+\footnotesize
 
-\small
+```
+$ git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+     deleted:   error.html
+     new file:   img/icon.png
 
-| Command      | Function             |
-| ------------ | -------------------- |
-| `git status` | Show status of files |
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working
+  directory)
+      modified:   imprint.html
 
-## `git status`
-
-- Explanation of the status area
-
-<!--prettier-ignore-->
-| Status Area                   | Corresponding actions                                  |
-| ----------------------------- | ----------------------------------- |
-| Changes to be committed       | `git restore --staged` to unstage                      |
-| Changes not staged for commit | `git add` to stage or `git restore` to discard changes |
-| Untracked files               | `git add` to start tracking                            |
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+      products.html
+```
 
 \normalsize
 
