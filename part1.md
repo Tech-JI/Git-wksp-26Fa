@@ -176,13 +176,13 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 <!--prettier-ignore-->
 | Command                      | Action                                                                |
 | ---------------------------- | --------------------------------------------------------------------- |
-| `cd [DIRECTORY]`             | Go to `DIRECTORY`, default: home directory       |
-| `ls [-a]` `[-l] [DIRECTORY]` | List files in `DIRECTORY`, default: CWD; -a show hidden files; -l show more info |
-| `mkdir <DIRECTORY>`          | Create `DIRECTORY`                                                    |
-| `cp <SOURCE> <DEST>`         | Copy `SOURCE` to `DEST`                                               |
-| `mv <SOURCE> <DEST>`         | Rename `SOURCE` to `DEST`                                             |
-| `mv <SOURCE>` `<DIRECTORY>`  | Move `SOURCE` to `DIRECTORY`                                        |
-| `rm [-r] <FILE>`             | Remove `FILE`; -r remove directories                                  |
+| `cd [DIRECTORY]`             | **Go to** `DIRECTORY`, default: home directory       |
+| `ls [-a]` `[-l] [DIRECTORY]` | **List files** in `DIRECTORY`, default: CWD; -a show hidden files; -l show more info |
+| `mkdir <DIRECTORY>`          | **Create** `DIRECTORY`                                                    |
+| `cp <SOURCE> <DEST>`         | **Copy** `SOURCE` to `DEST`                                               |
+| `mv <SOURCE> <DEST>`         | **Rename** `SOURCE` to `DEST`                                             |
+| `mv <SOURCE>` `<DIRECTORY>`  | **Move** `SOURCE` to `DIRECTORY`                                        |
+| `rm [-r] <FILE>`             | **Remove** `FILE`; -r remove directories                                  |
 
 \normalsize
 
