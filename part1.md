@@ -268,7 +268,7 @@ A repository is:
 
 **Exercise 1: Remote to Local**
 
-- Change directory to `~/git_wksp`
+- Change directory to `~/git_wksp` (`cd` and `mkdir`)
 
 - Clone your remote repository to local. URL is `[repository-url]`
 
