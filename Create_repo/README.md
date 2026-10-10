@@ -6,6 +6,47 @@ A handy tool for TAs in JI to handle works through [Gitea](https://focs.ji.sjtu.
 
 This tool is still under heavy development. The docs may not be updated on time, and all the features are provided with the probability to change.
 
+## Workshop tooling
+
+This fork adds `workshop.py`, a single command line tool that turns a sign-up
+spreadsheet into Gitea teams and repositories: it parses the spreadsheet, groups
+the students, checks the accounts against Gitea, and creates one team plus one
+private repository per group from a template repository.
+
+```bash
+python3 -m venv env && source env/bin/activate
+pip install -r requirements.txt
+cp .env.example .env && vi .env   # Gitea token, organization and host
+python3 workshop.py --help
+```
+
+Note: `pip install -e .` below does not work in this directory, there is no
+`setup.py` or `pyproject.toml`; run `workshop.py` from the project root so that
+it finds `joint_teapot` next to it.
+
+The subcommands, in the order they are meant to be run:
+
+| Command | What it does |
+| --- | --- |
+| `parse-excel` | spreadsheet -> `group.txt` + `individual.txt` |
+| `group` | cut the leftover individuals into groups of N |
+| `check-accounts` | which accounts exist on Gitea |
+| `detect-typos` | accounts that were probably mistyped |
+| `add-team-members` | add accounts to an organization team |
+| `create-repos` | one team + repository per line of `group.txt` |
+| `verify-repos` | check collaborators and default branch |
+| `check-team` | collaborators missing from an organization team |
+| `report` | the grouping and the accounts still not registered |
+
+Everything that talks to Gitea is read-only unless the command is given
+`--apply` or `--yes`. `create-repos` is idempotent, so it can be re-run to pick
+up students who registered late.
+
+See [docs/workshop.md](docs/workshop.md) for the full workflow, the grouping
+rules, and the Gitea quirks worth knowing (no API for adding a plain
+organization member, `/users/search` unavailable on some instances, the
+redirecting host breaking every write request).
+
 ## Getting Started
 
 ### Setup venv (Optional)

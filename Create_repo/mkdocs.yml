@@ -3,3 +3,6 @@ repo_url: https://github.com/BoYanZh/joint-teapot
 repo_name: BoYanZh/joint-teapot
 theme:
   name: material
+nav:
+  - Home: index.md
+  - Workshop tooling: workshop.md
