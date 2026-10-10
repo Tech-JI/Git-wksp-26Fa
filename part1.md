@@ -13,6 +13,8 @@ urlcolor: blue
 header-includes: |
   \usepackage{tikz}
   \usepackage{caption}
+  \usepackage{listings}
+  \usepackage{multicol}
   \usetikzlibrary{arrows.meta}
   \setbeamertemplate{headline}{}
   \definecolor{ink}{HTML}{000000}
@@ -31,18 +33,6 @@ header-includes: |
 \tableofcontents
 
 # Introduction
-
-## A personal anecdote
-
-How Git could have saved me (and you!) an hour's work of Vy100 essay
-
-## Alternatives to Git Workshop
-
-- Google "how to use git", "git tutorial"
-
-- [Pro Git](https://git-scm.com/book/en/v2)
-
-- Ask AI
 
 ## The what and the why
 
@@ -70,11 +60,13 @@ How Git could have saved me (and you!) an hour's work of Vy100 essay
 
 - [sindresorhus/awesome](https://github.com/sindresorhus/awesome): online Git repository containing self-study materials for Computer Science
 
-## Project
+## Alternatives to Git Workshop
 
-![Screenshot of the racing game](img/game_screenshot.png){ width=60% }
+- Google "how to use git", "git tutorial"
 
-It's our turn! We're gonna **build our own racing game** with Git. One config file, four roles, and a change you can see the moment you reload the page. Your group's starting repository is at `[repository-url]`.
+- [Pro Git](https://git-scm.com/book/en/v2)
+
+- Ask AI
 
 ## Enter shell
 
@@ -94,7 +86,27 @@ Not so fast! Don't just download the files in your browser. Use **shell** instea
 
 - A: Because we need shell to send Git (and other) commands to our OS
 
-- Conventions: `Monospace` for commands and code. Brackets ([]) for optional arguments, angle brackets (<>) for mandatory arguments, vertical bars (|) separate choices, and ellipses (...) can be repeated.
+---
+
+\begin{columns}
+
+\begin{column}{0.5\textwidth}
+
+\includegraphics[width=\textwidth]{img/information flow.png}
+
+\end{column}
+
+\begin{column}{0.5\textwidth}
+
+- terminal passes user input to the shell. 
+
+- The shell interprets commands and requests services from the OS
+
+- OS manages resources and interacts with hardware.
+
+\end{column}
+
+\end{columns}
 
 ## Different kinds of shell
 
@@ -165,6 +177,8 @@ flowchart TD
 
 Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
+Unix filesystem organizes files in a tree-like structure. The root directory (`/`) is the starting point of the entire filesystem, and all files and directories are located under it. Each directory can contain subdirectories and files. A path such as `/home/mary` describes the location of a file or directory by listing the directories from the root to the target.
+
 ## Special directories
 
 <!--prettier-ignore-->
@@ -182,6 +196,14 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 
 - E.g. If you're in `~/a/b`, then `../c` is the same as `~/a/c`
 
+## conventions
+
+- Conventions: `Monospace` for commands and code. Brackets ([]) for optional arguments, angle brackets (<>) for mandatory arguments, vertical bars (|) separate choices, and ellipses (...) can be repeated.
+
+- e.g. `git clone [-b <branch>] <URL> [directory...]`
+
+- e.g. `git checkout <branch> | git switch <branch>`
+
 ## Basic shell commands
 
 \small
@@ -194,12 +216,13 @@ Examples: `/home/mary`, `/bin`, `/lib/lib64`
 | `mkdir <DIRECTORY>`          | **Create** `DIRECTORY`                                                    |
 | `cp <SOURCE> <DEST>`         | **Copy** `SOURCE` to `DEST`                                               |
 | `mv <SOURCE> <DEST>`         | **Rename** `SOURCE` to `DEST`                                             |
+| `touch <File>`               | **Create** `File` | `                                             |
 | `mv <SOURCE>` `<DIRECTORY>`  | **Move** `SOURCE` to `DIRECTORY`                                        |
 | `rm [-r] <FILE>`             | **Remove** `FILE`; -r remove directories                                  |
 
 \normalsize
 
-More information: use `COMMAND -h`, `COMMAND --help`, `man COMMAND`, or google "COMMAND man page"
+More information: use `<command> -h`, `<command> --help`, `man <command>`, or google "COMMAND man page"
 
 ## Invoke text editor in shell
 

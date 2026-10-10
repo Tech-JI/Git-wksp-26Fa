@@ -12,7 +12,7 @@ else
 endif
 
 build:
-	@pandoc --pdf-engine=xelatex -t beamer -F mermaid-filter --slide-level=2 --toc-depth=1 --syntax-highlighting=idiomatic -o part1.pdf part1.md
-	@pandoc --pdf-engine=xelatex --syntax-highlighting=tango -V colorlinks=true -V linkcolor=blue -V urlcolor=blue -o ssh_setup.pdf ssh_setup.md
+	@pandoc --pdf-engine=xelatex -t beamer -F mermaid-filter --slide-level=2 --toc-depth=1 --highlight-style=tango -o part1.pdf part1.md
+	@pandoc --pdf-engine=xelatex --highlight-style=tango -V colorlinks=true -V linkcolor=blue -V urlcolor=blue -o ssh_setup.pdf ssh_setup.md
 	@pandoc --pdf-engine=lualatex -V mainfont="$(PDF_FONT)" $(FONT_FALLBACK) -o worksheet.pdf worksheet.md
 	@echo Build success.
